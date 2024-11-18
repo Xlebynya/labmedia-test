@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тз</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" async></script>  
+</head>
+<body>
+    <div class="container">
+        <div class="search-bar">
+            <h1>Список пользователей</h1>
+            <button type="submit">Поиск</button>
+            <input type="text" placeholder="Поиск по имени или e-mail" name="search">
+        </div>
+
+        <div class="table-header">
+            <span>Сортировка</span>
+            <span>Дата регистрации</span>
+            <span>Рейтинг</span>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Имя пользователя</th>
+                    <th>E-mail</th>
+                    <th>Дата регистрации</th>
+                    <th>Рейтинг</th>
+                    <th></th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Username</td>
+                    <td>test@test.ru</td>
+                    <td>23.09.19</td>
+                    <td>12</td>
+                    <td><button class="remove-button">Удалить</button></td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>

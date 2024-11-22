@@ -19,9 +19,9 @@
 <body>
     <div class="container">
         <h1>Список пользователей</h1>
-        <form action="" class="search-bar">
+        <form class="search-bar" onsubmit="return false">
             <div class="search-container">
-                <button type="submit">
+                <button onclick="handleSearch()">
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M16.5 15.5L20 19" stroke="#9EAAB4" stroke-width="1.5" stroke-linecap="round"
                             stroke-linejoin="round" />
@@ -33,7 +33,7 @@
                 <input type="text" placeholder="Поиск по имени или e-mail">
             </div>
 
-            <button type="reset" value="Reset">
+            <button type="reset" onclick="resetTable(); renderTable()">
                 <span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -53,12 +53,9 @@
         <div class="table-container">
             <div class="table-header">
                 <span>Сортировка:</span>
-                <button class="sort-button active">Дата регистрации</button>
-                <button class="sort-button">Рейтинг</button>
+                <button class="sort-button" onclick="sortTable('date')" id="dateSort">Дата регистрации</button>
+                <button class="sort-button" onclick="sortTable('rating')" id="ratingSort">Рейтинг</button>
             </div>
-
-
-
 
             <table>
                 <thead>
@@ -74,6 +71,11 @@
                 <tbody>
                 </tbody>
             </table>
+
+            <div class="pagintion">
+                <button onclick="prevBtn()">PREV</button>
+                <button onclick="nextBtn()">NEXT</button>
+            </div>
         </div>
     </div>
 </body>
